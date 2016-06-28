@@ -5,7 +5,8 @@ body {
   color: #4B484F;
 }
 main {
-  width: 92%;
+  position: relative;
+  width: 100%;
   background-color: #EEE;
 }
 main img {
@@ -13,15 +14,54 @@ main img {
   width: 100%;
 }
 h2 {
+  display: block;
+  position: relative;
   font-size: 3vw;
   text-align: center;
+  width: 100%;
+  background-color: #EEE;
+  z-index: 1;
 }
 h3 {
   padding-left: 4%;
 }
 .answerblock {
+  position: relative;
   width: 70%;
   margin: 0 auto;
   text-align: left;
   padding-bottom: 5%;
+  font-size: 1.75vw;
+}
+h2::before {
+  display: block;
+  content: '';
+  width: 50%;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  left: -15%;
+  top: 50%;
+  z-index: 0;
+}
+
+h2::after {
+  display: block;
+  content: '';
+  width: 50%;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  right: -15%;
+  top: 50%;
+  z-index: 0;
+}
+footer {
+  display: block;
+  background-color: #4B484F;
+  color: white;
+  font-size: 1.25vw;
+  width: 100%;
+  text-align: center;
+  padding: 8% 0 2% 0;
 }
